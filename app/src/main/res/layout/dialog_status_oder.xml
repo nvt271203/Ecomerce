@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="15sp"
+     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="20sp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15sp"
+        android:textColor="@color/black"
+        android:background="#10000000"
+        android:text="Trạng thái đơn hàng"/>
+    <RadioGroup
+        android:id="@+id/radioStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RadioButton
+            android:id="@+id/radioWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="@color/wait"
+            android:drawableTint="@color/wait"
+            android:drawablePadding="10sp"
+            android:drawableRight="@drawable/wait"
+            android:text="Chờ kiểm duyệt" />
+        <RadioButton
+            android:id="@+id/radioSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10sp"
+            android:textColor="@color/success"
+            android:drawableTint="@color/success"
+            android:drawableRight="@drawable/success"
+            android:text="Xác nhận" />
+        <RadioButton
+            android:id="@+id/radioRefuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/refuse"
+            android:textColor="@color/refuse"
+            android:drawableTint="@color/refuse"
+            android:drawablePadding="10sp"
+            android:text="Huỷ đơn" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            android:paddingLeft="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_overload_solid"
+            android:drawableLeft="@drawable/back"
+            android:layout_marginRight="5sp"
+            android:drawableTint="@color/white"
+            android:paddingRight="20sp"
+            android:textAllCaps="false"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hoàn tất"
+            android:layout_marginStart="5sp"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:drawableRight="@drawable/check"
+            android:drawableTint="@color/white"
+            android:paddingRight="20sp"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

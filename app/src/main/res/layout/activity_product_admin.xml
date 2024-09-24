@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAdmin.ProductAdminActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ảnh sản phẩm" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/imgProductFirst"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    android:background="#20000000"
+                    android:padding="10sp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toStartOf="@+id/imgProductSecond"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/img_bgadd"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imgProductSecond"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_weight="1"
+                    android:background="#20000000"
+                    android:scaleType="centerInside"
+                    android:padding="10sp"
+                    app:layout_constraintEnd_toStartOf="@+id/imgProductThird"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgProductFirst"
+                    app:srcCompat="@drawable/img_bgadd"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imgProductThird"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    android:background="#20000000"
+                    android:padding="10sp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgProductSecond"
+                    app:srcCompat="@drawable/img_bgadd"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/item_menu_selected"
+                android:layout_marginVertical="20sp"
+                android:layout_marginHorizontal="60sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTitle"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tên sản phẩm" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:hint="Mô tả sản phẩm" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10sp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginRight="5sp"
+                        android:hint="Số lượng sản phẩm" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.blackcat.currencyedittext.CurrencyEditText
+                        android:id="@+id/editWholesalePrice"
+                        android:paddingLeft="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Giá sỉ" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10sp"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="1"
+                    android:layout_marginRight="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <com.blackcat.currencyedittext.CurrencyEditText
+                        android:id="@+id/editSellingPrice"
+                        android:paddingLeft="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Giá bán" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.blackcat.currencyedittext.CurrencyEditText
+                        android:id="@+id/editSalePrice"
+                        android:paddingLeft="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Giá sale" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddCategories"
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_select"
+                android:drawableRight="@drawable/right"
+                android:drawableTint="@color/item_menu_selected"
+                android:textAllCaps="false"
+                android:paddingRight="30sp"
+                android:text="Chọn danh mục sản phẩm" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveProduct"
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_overload_solid"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/check"
+                android:drawableTint="@color/white"
+                android:textAllCaps="false"
+                android:paddingRight="30sp"
+                android:text="Lưu sản phẩm" />
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

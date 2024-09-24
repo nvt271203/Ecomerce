@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FashionEcommerce" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+    <style name="Base.Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="CustomAlertDialogRetangle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog_retangle</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="CustomInputText" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/item_menu_selected</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CustomSearchView">
+        <item name="colorAccent">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="android:editTextColor">@color/item_menu_selected</item>
+        <item name="android:textColorHint">#90000000</item>
+    </style>
+
+    <style name="CustomCheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="colorOnSurface">@color/item_menu_selected</item>
+        <!--        Màu nền của v checkbox   -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorSurface">@color/item_menu_selected</item>
+        <!--        Màu v checkbox-->
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.FashionEcommerce" parent="Base.Theme.FashionEcommerce" />
+</resources>

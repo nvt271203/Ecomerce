@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="40sp"
+    android:orientation="vertical"
+    android:padding="20sp"
+    >
+
+    <ImageView
+        android:id="@+id/imgCategory"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_add" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2sp"
+        android:layout_marginTop="20sp"
+        android:text="Tên danh mục sản phẩm" />
+    <EditText
+        android:id="@+id/editCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input"
+        android:drawableLeft="@drawable/product"
+        android:drawableTint="@color/bg_primary"
+        android:drawablePadding="10sp"
+        android:ems="10"
+        android:hint="Nhập tên danh mục"
+        android:inputType="text"
+        android:padding="12sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLogin" />
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_10"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginRight="10sp"
+            android:text="Thoát" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10sp"
+            android:background="@drawable/bg_btn_10"
+            android:textColor="@color/white"
+            android:text="Lưu" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="item_menu_selected">#CC0000</color>
+    <color name="bg_primary">#333333</color>
+    <color name="blue">#0080FF</color>
+    <color name="sale">#BA0000</color>
+    <color name="sale2">#df2c4a</color>
+    <color name="sale3">#FE2020</color>
+    <color name="gray">#CCCCCC</color>
+
+    <color name="wait">#F27405</color>
+    <color name="success">#0080FF</color>
+    <color name="refuse">#CC0000</color>
+
+</resources>

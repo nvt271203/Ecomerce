@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentAdmin.HomeAdminFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60sp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgShop"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="20sp"
+                android:padding="3sp"
+                android:scaleType="center"
+                android:src="@drawable/logoshop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="1dip"
+                app:riv_corner_radius="40sp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginBottom="3sp"
+                android:text="T - No "
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgShop"
+                app:layout_constraintStart_toEndOf="@+id/imgShop" />
+
+            <ImageView
+                android:id="@+id/imgAddress"
+                android:layout_width="20sp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgMessage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/map"
+                app:tint="@color/item_menu_selected" />
+
+            <ImageView
+                android:id="@+id/imgMessage"
+                android:layout_width="20sp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgList"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/message_menu"
+                app:tint="@color/item_menu_selected" />
+
+            <ImageView
+                android:id="@+id/imgList"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginRight="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/list"
+                app:tint="@color/item_menu_selected" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:padding="5sp"
+                android:text="Cửa hàng thời trang"
+                android:textColor="#BBBBBB"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/imgShop"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:background="#80FFFFFF" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40sp"
+                android:layout_marginVertical="15sp"
+                android:background="@drawable/bg_radius_search"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="10sp"
+                android:ems="10"
+                android:inputType="textCapSentences"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:theme="@style/CustomSearchView"
+                app:defaultQueryHint="#80FFFFFF"
+                app:iconifiedByDefault="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryHint="Tìm kiếm">
+            </androidx.appcompat.widget.SearchView>
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5sp"
+                android:paddingHorizontal="10sp"
+                android:layout_margin="10sp"
+                android:background="@drawable/bg_radius_selected_search"
+                android:src="@drawable/right"
+                app:layout_constraintBottom_toBottomOf="@+id/searchView"
+                app:layout_constraintEnd_toEndOf="@+id/searchView"
+                app:layout_constraintTop_toTopOf="@+id/searchView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

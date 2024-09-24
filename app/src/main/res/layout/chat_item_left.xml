@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginRight="100sp"
+    android:layout_height="50sp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgChatBot"
+        android:layout_width="50sp"
+        android:layout_height="40sp"
+        android:layout_marginLeft="20sp"
+        android:padding="3sp"
+        android:scaleType="centerInside"
+        android:src="@drawable/robot_ai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="@color/bg_primary"
+        app:riv_border_width="1dip"
+        app:riv_corner_radius="40sp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chat_left"
+        android:paddingTop="10sp"
+        android:textColor="@color/white"
+        android:paddingBottom="10sp"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:layout_marginLeft="10sp"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgChatBot"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckSeen"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/textMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
